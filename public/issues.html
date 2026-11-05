@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Equipment | LabTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-icon">L</span> LabTrack</a>
+    <nav aria-label="Main navigation">
+      <a href="/">Dashboard</a>
+      <a href="/equipment.html">Equipment</a>
+      <a href="/users.html">Users</a>
+      <a class="active" aria-current="page" href="/issues.html">Issue</a>
+      <a href="/returns.html">Return</a>
+    </nav>
+    <span class="admin-chip">LAB ADMIN</span>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <div><span class="eyebrow">COLLEGE LAB OPERATIONS</span><h1>Issue Equipment</h1><p>Record equipment borrowed by a registered student or faculty member.</p></div>
+      <div class="welcome-mark" aria-hidden="true">⚙</div>
+    </section>
+    <section class="panel">
+      <div class="section-head"><div><span class="eyebrow dark">NEW TRANSACTION</span><h2>Issue equipment</h2><p>Only available equipment can be issued.</p></div></div>
+      <form id="issueForm" class="form-grid issue-form">
+        <label>Equipment<select id="issueEquipment" required><option value="">Select equipment</option></select></label>
+        <label>User<select id="issueUser" required><option value="">Select user</option></select></label>
+        <label>Quantity<input id="issueQuantity" type="number" min="1" value="1" required></label>
+        <label>Issue date<input id="issueDate" type="date" required></label>
+        <div class="form-actions"><button class="btn primary" type="submit">Issue equipment</button></div>
+      </form>
+    </section>
+    <div id="message" role="status"></div>
+  </main>
+  <footer>LabTrack · College Lab Equipment Management System</footer>
+</body>
+</html>

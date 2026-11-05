@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment | LabTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-icon">L</span> LabTrack</a>
+    <nav aria-label="Main navigation">
+      <a href="/">Dashboard</a>
+      <a class="active" aria-current="page" href="/equipment.html">Equipment</a>
+      <a href="/users.html">Users</a>
+      <a href="/issues.html">Issue</a>
+      <a href="/returns.html">Return</a>
+    </nav>
+    <span class="admin-chip">LAB ADMIN</span>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <div><span class="eyebrow">COLLEGE LAB OPERATIONS</span><h1>Equipment</h1><p>Add, search, update, and remove laboratory equipment.</p></div>
+      <div class="welcome-mark" aria-hidden="true">⚙</div>
+    </section>
+    <section class="panel">
+      <div class="section-head">
+        <div><span class="eyebrow dark">INVENTORY</span><h2>Equipment inventory</h2><p>Manage equipment and check available stock.</p></div>
+        <button class="btn primary" id="showEquipmentForm">＋ Add equipment</button>
+      </div>
+      <form id="equipmentForm" class="form-grid hidden">
+        <input type="hidden" id="equipmentId">
+        <label>Equipment name<input id="equipmentName" required placeholder="e.g. Arduino Uno"></label>
+        <label>Category<input id="equipmentCategory" required placeholder="e.g. Electronics"></label>
+        <label>Quantity<input id="equipmentQuantity" type="number" min="0" required placeholder="0"></label>
+        <div class="form-actions"><button class="btn primary" type="submit">Save equipment</button><button class="btn light" type="button" id="cancelEquipment">Cancel</button></div>
+      </form>
+      <div class="toolbar"><input id="equipmentSearch" placeholder="Search by ID, name or category..." aria-label="Search equipment"><button class="btn light" id="refreshEquipment">Refresh</button></div>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Equipment</th><th>Category</th><th>Total</th><th>Available</th><th>Status</th><th>Actions</th></tr></thead><tbody id="equipmentRows"><tr><td colspan="7" class="empty">Loading...</td></tr></tbody></table></div>
+    </section>
+    <div id="message" role="status"></div>
+  </main>
+  <footer>LabTrack · College Lab Equipment Management System</footer>
+</body>
+</html>

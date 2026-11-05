@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return Equipment | LabTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-icon">L</span> LabTrack</a>
+    <nav aria-label="Main navigation">
+      <a href="/">Dashboard</a>
+      <a href="/equipment.html">Equipment</a>
+      <a href="/users.html">Users</a>
+      <a href="/issues.html">Issue</a>
+      <a class="active" aria-current="page" href="/returns.html">Return</a>
+    </nav>
+    <span class="admin-chip">LAB ADMIN</span>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <div><span class="eyebrow">COLLEGE LAB OPERATIONS</span><h1>Return Equipment</h1><p>Review issue history and record equipment returns.</p></div>
+      <div class="welcome-mark" aria-hidden="true">⚙</div>
+    </section>
+    <section class="panel">
+      <div class="section-head"><div><span class="eyebrow dark">ISSUE HISTORY</span><h2>Equipment transactions</h2><p>Mark active issues as returned; completed transactions remain here for reference.</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Issue ID</th><th>Equipment</th><th>User</th><th>Quantity</th><th>Issue date</th><th>Return date</th><th>Status / Action</th></tr></thead><tbody id="returnRows"><tr><td colspan="7" class="empty">Loading...</td></tr></tbody></table></div>
+    </section>
+    <div id="message" role="status"></div>
+  </main>
+  <footer>LabTrack · College Lab Equipment Management System</footer>
+</body>
+</html>

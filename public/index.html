@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | LabTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-icon">L</span> LabTrack</a>
+    <nav aria-label="Main navigation">
+      <a class="active" aria-current="page" href="/">Dashboard</a>
+      <a href="/equipment.html">Equipment</a>
+      <a href="/users.html">Users</a>
+      <a href="/issues.html">Issue</a>
+      <a href="/returns.html">Return</a>
+    </nav>
+    <span class="admin-chip">LAB ADMIN</span>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <div><span class="eyebrow">COLLEGE LAB OPERATIONS</span><h1>Dashboard</h1><p>Overview of laboratory equipment, users, and active issues.</p></div>
+      <div class="welcome-mark" aria-hidden="true">⚙</div>
+    </section>
+    <section class="stats" aria-label="Lab statistics">
+      <div class="stat"><span>Total equipment types</span><strong id="totalEquipment">—</strong><small>Registered items</small></div>
+      <div class="stat"><span>Total units</span><strong id="totalUnits">—</strong><small>Across all equipment</small></div>
+      <div class="stat"><span>Available units</span><strong id="availableUnits">—</strong><small>Ready to issue</small></div>
+      <div class="stat"><span>Registered users</span><strong id="totalUsers">—</strong><small>Students and faculty</small></div>
+      <div class="stat"><span>Active issues</span><strong id="activeIssues">—</strong><small>Not yet returned</small></div>
+    </section>
+    <div id="message" role="status"></div>
+  </main>
+  <footer>LabTrack · College Lab Equipment Management System</footer>
+</body>
+</html>
